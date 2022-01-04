@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="contact.css">
+    <!---Google Fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&family=Kanit:ital,wght@0,100;0,200;0,300;0,600;1,200;1,400;1,500&display=swap" rel="stylesheet">
+    <!----Font Awesome CDN-->
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css">
+    <link rel="icon" href="img/logo-transparent.png">
+    <!--Phone number checker-->
+    <link
+     rel="stylesheet"
+     href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.css"/>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
+    <title>Totally | CONTACT</title>
+</head>
+<body>
+    <section class="header">
+        <div class="announce">
+            <p>20% off our world class Garlic Bread.... While stocks last</p>
+        </div>
+        <nav>
+            <div class="nav-logo">
+                <a href="#"><img src="img/logowithwords.jpg" alt="Totally Delicious logo"></a>
+            </div>
+            <div class="sep-left"></div>
+            <div class="nav-links">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="store.html">Store</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+            <div class="cart-nav">
+                <i class=" fas fa-shopping-cart"></i>
+                <span>Cart(0)</span>
+            </div>
+            <div class="menu-toggle">
+                <span id="menu-top"></span>
+                <span id="menu-txt">MENU</span>
+                <span id="menu-btm"></span>
+            </div>
+        </nav>
+        <div class="cart-sect">
+            <div class="empty-cart">
+                <h5>Your cart is empty</h5>
+            </div>
+            <div class="cart-area">
+           <!---Cart Items go here-->
+            </div>
+            <div class="checkout">
+                <div class="total">
+                    <h5>Total:</h5>
+                    <h5 id="cart-total">JMD $0.00</h5>
+                </div>
+                <a href="checkout.html">Checkout</a>
+            </div>
+        </div>
+        <div class="header-contact">
+            <h1>Contact Us</h1>
+        </div>
+    </section>
+
+    <section class="contact-main">
+        <div class="cont-body">
+            <div class="contact-form">
+            <form>
+               <div class="row">
+                   <div>
+                    <label for="inputEmail">Email</label>
+                    <input type="email" class="form-control" id="inputEmail"
+                        placeholder="Enter email...">
+                   </div>
+                   <div>
+                    <label for="inputName">Name</label>
+                    <input type="text" class="form-control" id="inputName" placeholder="Enter name...">
+                   </div>
+               </div>
+               <div class="row">
+                   <div>
+                    <label for="inputPhone">Telephone</label>
+                    <input type="tel" id="inputPhone" class="form-control"
+                        aria-describedby="telHelpBlock" placeholder="(_ _ _) _ _ _-_ _ _ _" onkeydown="phoneNumberFormatter()"> 
+                    <small id="telHelpBlock" class="form-text text-muted">
+                        Please check number
+                    </small>
+                    <script>
+                        const phoneInputField = document.querySelector("#inputPhone");
+                        const phoneInput = window.intlTelInput(phoneInputField, {
+                        preferredCountries: ["jm", "us", "uk", "tt"],
+                          utilsScript:
+                            "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js",
+                        });
+                      </script>
+                   </div>
+                   <div>
+                    <label for="inquiry">Contact reason:</label>
+                    <select name="inquries" id="inquiry">
+                      <option value="Catering">Catering</option>
+                      <option value="Wholesale Purchase">Wholesale Purchase</option>
+                      <option value="Quality Issue">Quality Issue</option>
+                      <option value="Other">Other</option>
+                    </select>
+                   </div>
+               </div>
+               <div class="msg">
+                <label for="inputMessage">Message</label>
+                <textarea class="form-control" id="inputMessage" rows="4" placeholder="Enter message here..." maxlength="500"></textarea>
+                <small id="msgHelpBlock" class="form-text text-muted">500 character limit</small>
+               </div>
+               <div class="row">
+                <button type="submit"><i class="fas fa-paper-plane"></i></button>
+               </div>
+            </form>
+            </div>
+            <div class="contact-info">
+                <h2>Get in touch with us</h2>
+                <div>
+                    <i class="fas fa-envelope"></i>
+                    <span>support@totallydeliciousja.com</span>
+                </div>
+                <div>
+                    <i class="fas fa-phone"></i>
+                    <span>+1(876)983-8888</span>
+                </div>
+                <div>
+                    <i class="fab fa-facebook"></i>
+                    <span>Totally Delicious</span>
+                </div>
+                <div>
+                    <i class="fab fa-instagram"></i>
+                    <span>@totallydeliciousparadise_</span>
+                </div>
+            </div>
+        </div>
+    </section>
+   
+    <section class="footer">
+        <div class="add-email">
+            <h5>Join Our Email List</h5>
+            <div class="email-enter">
+                <input type="email" id="userEmail" name="emailList">
+                <button type="submit">Get Updates</button>
+            </div>
+        </div>
+        <div class="footer-body">
+            <img src="img/logo-transparent.png" alt="totally delicious logo">
+            <div class="foot-nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="store.html">Shop</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+            <div class="social-links">
+                <i class="fab fa-facebook"></i>
+                <i class="fab fa-instagram"></i>
+                <i class="fab fa-youtube"></i>
+            </div>
+        </div>
+    </section>
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <script src="index.js"></script>
+</body>
+</html>
